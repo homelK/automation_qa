@@ -8,7 +8,7 @@ import static org.testng.Assert.assertEquals;
 public class FirstExampleTest {
 
    @Test
-   public void testRRR() {
+   public void test001() {
        System.setProperty("webdriver.gecko.driver","C:\\opt\\geckodriver.exe");
        WebDriver driver = new FirefoxDriver();
 //

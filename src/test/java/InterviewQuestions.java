@@ -40,7 +40,7 @@ public class InterviewQuestions {
     }
 
     @Test
-    public void twoDimensionalArraysVerTwo() {
+    public void twoDimensionalArraysVersTwo() {
         String[][] census = {
                 {"Mallard", "Snipe", "Partridge"},
                 {"Sparow", "Swan", "Raven"}
