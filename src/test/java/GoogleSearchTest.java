@@ -2,35 +2,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-import java.sql.SQLOutput;
-
 public class GoogleSearchTest {
-
-
-    @Test
-    public void searchInFireFox() {
-
-        System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver.exe");
-
-        WebDriver driver = new FirefoxDriver();
-
-        driver.get("https://google.com/");
-
-        String nameValue = "q";
-        WebElement textInput = driver.findElement(By.name(nameValue));
-        textInput.sendKeys("Researchgate");
-        textInput.submit();
-
-        WebElement resultSearch = driver.findElement(By.id("result-stats")); // we've found the element by id
-        String wholeString = resultSearch.getText().replace(" ", "");
-        System.out.println(wholeString);
-
-
-
-    }
 
     @Test
     public void testSearchChrome() {
