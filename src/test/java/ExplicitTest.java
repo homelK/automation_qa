@@ -19,8 +19,7 @@ public class ExplicitTest extends TestBase {
 
     }
 
-    private void navigateToMainPage() {
-        driver.get("https://the-internet.herokuapp.com/");
+    private void navigateToMainPage() {driver.get("https://the-internet.herokuapp.com/");
     }
 
     private void findlEmenetSubmit() {
