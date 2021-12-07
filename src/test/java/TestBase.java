@@ -2,6 +2,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import java.time.Duration;
@@ -12,7 +13,7 @@ public class TestBase {
     WebDriver driver;
 
     @Parameters({"browser"})
-    @BeforeSuite
+    @BeforeClass
     public void suiteSetup (String browser){
 
         /* String os = System.getProperty("os.name");
@@ -26,15 +27,15 @@ public class TestBase {
             System.out.println("You are lucky");
         } */
 
-        WebDriverManager.chromedriver().setup();
-        WebDriverManager.firefoxdriver().setup();
 
         if(browser.equalsIgnoreCase("Chrome")) {
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
 
         if(browser.equalsIgnoreCase("Firefox")) {
+            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
