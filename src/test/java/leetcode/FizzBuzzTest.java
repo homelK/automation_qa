@@ -26,9 +26,11 @@ public class FizzBuzzTest {
 
             if (i % 3 == 0 && i % 5 == 0) {
                 answer = "FizzBuzz";
-            } else if (i % 3 == 0) {
+            }
+            else if (i % 3 == 0) {
                 answer = "Fizz";
-            } else if (i % 5 == 0) {
+            }
+            else if (i % 5 == 0) {
                 answer = "Buzz";
             }
 

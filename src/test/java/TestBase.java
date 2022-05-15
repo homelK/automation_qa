@@ -1,12 +1,13 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import java.time.Duration;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class TestBase {
 
@@ -14,7 +15,7 @@ public class TestBase {
 
     @Parameters({"browser"})
     @BeforeClass
-    public void suiteSetup (String browser){
+    public void suiteSetup (@Optional("FireFox") String browser){
 
         /* String os = System.getProperty("os.name");
 
